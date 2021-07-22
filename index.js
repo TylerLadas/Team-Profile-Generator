@@ -1,5 +1,4 @@
 // node modules
-const fs = require('fs');
 const inquirer = require('inquirer');
 
 // employee classes
@@ -10,10 +9,13 @@ const Intern = require('./lib/Intern');
 // render HTML function
 const generateHTML = require('./src/template')
 
+// writefile function
+const writeFile = require('./src/writefile')
+
 // create array of employees
 const employeeArray = [];
 
-// manager inputs
+// manager prompts
 const promptManager = () => {
     return inquirer
     .prompt([
@@ -62,6 +64,7 @@ const promptManager = () => {
     })
 };
 
+// engineer prompts
 const promptEngineer = () => {
     console.log(`
 =================
@@ -115,6 +118,8 @@ Add a New Engineer
     })
 };
 
+
+// intern prompts
 const promptIntern = () => {
     console.log(`
 =================
@@ -168,7 +173,15 @@ Add a New Intern
     })
 };
 
+
+// initialize app
 promptManager()
     .then(employeeArray => {
-        return console.log(employeeArray);
+        return generateHTML(employeeArray);
     })
+    .then( data=> {
+        return writeFile(data);
+    })
+    .catch(err => {
+        console.log(err);
+    }) ;
