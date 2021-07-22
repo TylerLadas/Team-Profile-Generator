@@ -1,15 +1,15 @@
 //function to create manager card
-let generateManagerCard = data => {
+let generateManagerCard = manager => {
     return `
     <div class="col-3"
         <div class="card" style="width: 18rem;">
         <div class="card-header">
-            Featured
+            {{ name }}
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">ID: {{ id }}</li>
+            <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
+            <li class="list-group-item">Office Number: {{ office }}</li>
         </ul>
         </div>
     </div>
@@ -17,17 +17,17 @@ let generateManagerCard = data => {
 }
 
 //function to create engineer card
-let generateEngineerCard = data => {
+let generateEngineerCard = engineer => {
     return `
     <div class="col-3"
         <div class="card" style="width: 18rem;">
         <div class="card-header">
-            Featured
+            {{ name }}
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">ID: {{ id }}</li>
+            <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/{{ github }}" target="_blank">{{ github }}</a></li>
         </ul>
         </div>
     </div>
@@ -35,17 +35,17 @@ let generateEngineerCard = data => {
 }
 
 //function to create intern card
-let generateInternCard = data => {
+let generateInternCard = intern => {
     return `
     <div class="col-3"
         <div class="card" style="width: 18rem;">
         <div class="card-header">
-            Featured
+            {{ name }}
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">ID: {{ id }}/li>
+            <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
+            <li class="list-group-item">School: {{ school }}</li>
         </ul>
         </div>
     </div>
