@@ -1,5 +1,41 @@
-//function to create employee card
-let generateCard = data => {
+//function to create manager card
+let generateManagerCard = data => {
+    return `
+    <div class="col-3"
+        <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            Featured
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+        </ul>
+        </div>
+    </div>
+    `;
+}
+
+//function to create engineer card
+let generateEngineerCard = data => {
+    return `
+    <div class="col-3"
+        <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            Featured
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+        </ul>
+        </div>
+    </div>
+    `;
+}
+
+//function to create intern card
+let generateInternCard = data => {
     return `
     <div class="col-3"
         <div class="card" style="width: 18rem;">
