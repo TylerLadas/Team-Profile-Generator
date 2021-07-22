@@ -1,4 +1,3 @@
-const { expect, test } = require('@jest/globals');
 const Employee = require('../lib/Employee')
 
 test('creates a employee object', () => {
