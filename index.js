@@ -51,7 +51,6 @@ const promptManager = () => {
         const manager = new Manager (name, id, email, officeNumber);
 
         employeeArray.push(manager);
-        console.log(manager);
 
         if (addEmployee === "Engineer") {
             return promptEngineer();
@@ -106,7 +105,6 @@ Add a New Engineer
         const engineer = new Engineer (name, id, email, github);
 
         employeeArray.push(engineer);
-        console.log(engineer);
 
         if (addEmployee === "Engineer") {
             return promptEngineer();
@@ -161,7 +159,6 @@ Add a New Intern
         const intern = new Intern (name, id, email, school);
 
         employeeArray.push(intern);
-        // console.log(manager);
 
         if (addEmployee === "Engineer") {
             return promptEngineer();
@@ -180,6 +177,7 @@ promptManager()
         return generateHTML(employeeArray);
     })
     .then( data => {
+        console.log("Your team has been created, please view index.html")
         return writeFile(data);
     })
     .catch(err => {
