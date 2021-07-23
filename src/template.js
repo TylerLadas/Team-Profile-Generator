@@ -10,7 +10,7 @@ let generateManager = manager => {
         <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${manager.id}</li>
             <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
-            <li class="list-group-item">Office Number: ${manager.office}</li>
+            <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
         </ul>
         </div>
     </div>
@@ -29,7 +29,7 @@ let generateEngineer = engineer => {
         <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${engineer.id}</li>
             <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
-            <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></li>
+            <li class="list-group-item git">GitHub: <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></li>
         </ul>
         </div>
     </div>
@@ -46,7 +46,7 @@ let generateIntern = intern => {
             <h4><i class="fas fa-user-graduate"></i> Intern</h4>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: ${intern.id}/li>
+            <li class="list-group-item">ID: ${intern.id}</li>
             <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
             <li class="list-group-item">School: ${intern.school}</li>
         </ul>
