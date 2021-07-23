@@ -102,9 +102,9 @@ const generateHTML = data => {
             cards.push(internCard)
         }
     }
-    console.log(cards);
-    console.log(generatePage(cards))
-    // return generatePage(cards);
+    // console.log(cards);
+    // console.log(generatePage(cards))
+    return generatePage(cards);
 }
 
 module.exports = generateHTML;
