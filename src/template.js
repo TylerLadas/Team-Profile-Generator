@@ -1,5 +1,5 @@
 //function to create manager card
-let generateManagerCard = manager => {
+let generateManager = manager => {
     return `
     <div class="col-3"
         <div class="card" style="width: 18rem;">
@@ -18,7 +18,7 @@ let generateManagerCard = manager => {
 }
 
 //function to create engineer card
-let generateEngineerCard = engineer => {
+let generateEngineer = engineer => {
     return `
     <div class="col-3"
         <div class="card" style="width: 18rem;">
@@ -37,7 +37,7 @@ let generateEngineerCard = engineer => {
 }
 
 //function to create intern card
-let generateInternCard = intern => {
+let generateIntern = intern => {
     return `
     <div class="col-3"
         <div class="card" style="width: 18rem;">
@@ -56,7 +56,7 @@ let generateInternCard = intern => {
 }
 
 //function to generate html for dist/index.html
-let generateHTML = data => {
+const generatePage = cards => {
     return `
 <!DOCTYPE html>
 <html lang="en">
@@ -73,11 +73,38 @@ let generateHTML = data => {
         <h1>My Team</h1>
     </header>
     <div class="row">
-
+        ${cards}
     </div>
 </body>
 </html>
 `;
 };
+
+const generateHTML = data => {
+    
+    let cards = [];
+    
+    for(i = 0; i < data.length; i++) {
+
+        const employee = data[i]
+        const role = employee.getRole();
+        
+        if (role === "manager") {
+            const managerCard = generateManager(employee)
+            cards.push(managerCard)
+
+        } else if (role === "engineer") {
+            const engineerCard = generateEngineer(employee)
+            cards.push(engineerCard)
+
+        } else {
+            const internCard = generateIntern(employee)
+            cards.push(internCard)
+        }
+    }
+    console.log(cards);
+    console.log(generatePage(cards))
+    // return generatePage(cards);
+}
 
 module.exports = generateHTML;

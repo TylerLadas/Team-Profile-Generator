@@ -179,9 +179,9 @@ promptManager()
     .then(employeeArray => {
         return generateHTML(employeeArray);
     })
-    .then( data=> {
-        return writeFile(data);
-    })
+    // .then( data => {
+    //     return writeFile(data);
+    // })
     .catch(err => {
         console.log(err);
     }) ;
