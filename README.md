@@ -61,8 +61,7 @@ npm run test
 ## Questions
 
 To view my other work, check out my GitHub!: 
-[TylerLadas] <a href="http://example.com/" target="_blank">Hello, world!</a>
-
+<a href="https://github.com/TylerLadas" target="_blank">TylerLadas</a>
 
 For questions and inquiries contact me at:
 TylerLadas@hotmail.com
