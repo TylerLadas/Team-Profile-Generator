@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+// writes data to index.html
 const writeFile = data => {
     return new Promise((resolve, reject) => {
         fs.writeFile('./dist/index.html', data, err => {

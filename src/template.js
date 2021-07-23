@@ -81,6 +81,7 @@ const generatePage = cards => {
 `;
 };
 
+// loops through data objects and creates role specific cards
 const generateHTML = data => {
     
     let cards = [];
@@ -103,8 +104,7 @@ const generateHTML = data => {
             cards.push(internCard)
         }
     }
-    // console.log(cards);
-    // console.log(generatePage(cards))
+
     return generatePage(cards);
 }
 
