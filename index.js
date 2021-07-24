@@ -22,28 +22,56 @@ const promptManager = () => {
         {
             type: 'input',
             name: 'name',
-            message: 'Enter manager name.'
+            message: 'Enter manager name.',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter manager name!")
+                }
+            }
         },
         {
             type: 'input',
             name: 'id',
-            message: 'Enter manager ID.'
+            message: 'Enter manager ID.',
+            validate: idInput => {
+                if (idInput) {
+                    return true;
+                } else {
+                    console.log("Please enter manager ID!")
+                }
+            }
         },
         {
             type: 'input',
             name: 'email',
-            message: 'Enter manager email.'
+            message: 'Enter manager email.',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log("Please enter manager email!")
+                }
+            }
         },
         {
             type: 'input',
             name: 'officeNumber',
-            message: 'Enter manger office number.'
+            message: 'Enter manger office number.',
+            validate: officeNumberInput => {
+                if (officeNumberInput) {
+                    return true;
+                } else {
+                    console.log("Please enter manager office number!")
+                }
+            }
         },
         {
             type: 'list',
             name: 'addEmployee',
             message: 'What type of employee would you like to add to your team?',
-            choices: ['Engineer', 'Intern', 'None']
+            choices: ['Engineer', 'Intern', 'Done']
         }
     ])
     .then(managerData => {
@@ -76,28 +104,56 @@ Add a New Engineer
         {
             type: 'input',
             name: 'name',
-            message: 'Enter engineer name'
+            message: 'Enter engineer name.',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter engineer name!")
+                }
+            }
         },
         {
             type: 'input',
             name: 'id',
-            message: 'Enter engineer ID',
+            message: 'Enter engineer ID.',
+            validate: idInput => {
+                if (idInput) {
+                    return true;
+                } else {
+                    console.log("Please enter engineer ID!")
+                }
+            }
         },
         {
             type: 'input',
             name: 'email',
-            message: 'Enter engineer email'
+            message: 'Enter engineer email.',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log("Please enter engineer email!")
+                }
+            }
         },
         {
             type: 'input',
             name: 'github',
-            message: 'Enter engineer GitHub username'
+            message: 'Enter engineer GitHub username.',
+            validate: githubInput => {
+                if (githubInput) {
+                    return true;
+                } else {
+                    console.log("Please enter engineer GitHub username!")
+                }
+            }
         },
         {
             type: 'list',
             name: 'addEmployee',
             message: 'What type of employee would you like to add to your team?',
-            choices: ['Engineer', 'Intern', 'None']
+            choices: ['Engineer', 'Intern', 'Done']
         }
     ])
     .then(engineerData => {
@@ -130,28 +186,56 @@ Add a New Intern
         {
             type: 'input',
             name: 'name',
-            message: 'Enter intern name'
+            message: 'Enter intern name.',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter intern name!")
+                }
+            }
         },
         {
             type: 'input',
             name: 'id',
-            message: 'Enter intern ID',
+            message: 'Enter intern ID.',
+            validate: idInput => {
+                if (idInput) {
+                    return true;
+                } else {
+                    console.log("Please enter intern ID!")
+                }
+            }
         },
         {
             type: 'input',
             name: 'email',
-            message: 'Enter intern email'
+            message: 'Enter intern email.',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log("Please enter intern email!")
+                }
+            }
         },
         {
             type: 'input',
             name: 'school',
-            message: 'Enter intern school name'
+            message: 'Enter intern school name.',
+            validate: schoolInput => {
+                if (schoolInput) {
+                    return true;
+                } else {
+                    console.log("Please enter intern school name!")
+                }
+            }
         },
         {
             type: 'list',
             name: 'addEmployee',
             message: 'What type of employee would you like to add to your team?',
-            choices: ['Engineer', 'Intern', 'None']
+            choices: ['Engineer', 'Intern', 'Done']
         }
     ])
     .then(internData => {
