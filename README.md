@@ -40,7 +40,7 @@ To initialize the program please run the following code from the command line:
 node index.js
 ```
 
-For usage demo please view the following link:
+For usage demo please view the following link: https://drive.google.com/file/d/108LxVZPQwfLM1Ub7gExzTFl1X70QiNDO/view
 
 ## License
     
